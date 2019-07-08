@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Adicionar Evento</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="../js/addEvent.js"></script>
+</head>
+
+<body>
+  <form action="../php/adicionarEvento.php" method="post" class="form-group list-group col-6 offset-3">
+    <h1 class="display-3"> Adicionar Evento </h1>
+    <div class="form-group">
+      <label for="eventName">Nome do Evento</label>
+      <input type="text" name="eventName" id="eventName" class="form-control" placeholder="Nome do Evento" aria-describedby="helpId">
+      <small id="helpIdName" class="text-danger">*Necessário</small>
+    </div>
+
+    <div class="form-group">
+      <label for="eventDescr">Descrição do Evento</label>
+      <textarea class="form-control" name="eventDescr" id="eventDescr" rows="3"></textarea>
+      <small id="helpIdDescr" class="text-danger" >*Necessário</small>
+    </div>
+
+    <div class="form-group row">
+      <label for="datetimeStart" class="col-3 col-form-label">Hora de começo:</label>
+      <div class="col-9">
+        <input class="form-control" type="datetime-local" id="datetimeStart" name="datetimeStart">
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label for="datetimeEnd" class="col-3 col-form-label">Hora de término:</label>
+      <div class="col-9">
+        <input class="form-control" type="datetime-local" id="datetimeEnd" name="datetimeEnd">
+      </div>
+    </div>
+    
+    <div id="response"></div>
+    <br>
+    <button type="button" class="btn btn-primary" onclick="add();"> Add </button>
+    <br>
+    <a name="backToMain" id="backToMain" class="btn btn-dark" href="mainpage.html" role="button"> Retornar a Página Principal </a>
+  </form>
+
+</body>
+
+</html>
